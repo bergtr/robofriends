@@ -13,7 +13,7 @@ const CardList = ({robots}) => {
     }) 
     return (
         <Fragment>
-            <main>
+            <main className='tc'>
                 {cardComponent}
             </main>
         </Fragment>
