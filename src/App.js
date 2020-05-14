@@ -1,7 +1,8 @@
-import React, { Fragment, Component } from 'react';
+import React, { Component } from 'react';
 import CardList from './CardList';
 import SearchBox from './SearchBox';
 import './App.css';
+import Scroll from './Scroll';
 
 class App extends Component {
     constructor() {
@@ -33,17 +34,13 @@ class App extends Component {
             return <h1 className='title'>Loading</h1>
         } else {
             return (
-                <Fragment>
-                    <header className='tc'>
-                        <h1 className='f1 title'>Robofriends</h1>
-                    </header>
-                    <nav className='tc'>
-                        <SearchBox searchChange={this.onSearchChange} />
-                    </nav>
-                    <main>
+                <div className='tc'>
+                    <h1 className='f2 title'>Robofriends</h1>
+                    <SearchBox searchChange={this.onSearchChange} />
+                    <Scroll>
                         <p><CardList robots={filteredRobots} /></p>
-                    </main>
-                </Fragment>
+                    </Scroll>
+                </div>
             );
         }
     }
