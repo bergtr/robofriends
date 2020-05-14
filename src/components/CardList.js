@@ -12,7 +12,7 @@ const CardList = ({ robots }) => {
         );
     })
     return (
-        <div className='tc'>
+        <div className='flex flex-wrap flex-auto:0 justify-center'>
             {cardComponent}
         </div>
     )
