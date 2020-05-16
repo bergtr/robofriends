@@ -49,7 +49,7 @@ class App extends Component {
                     <SearchBox searchChange={onSearchChange} />
                     <Scroll>
                         <ErrorBoundary>
-                            <p><CardList robots={filteredRobots} /></p>
+                            <CardList robots={filteredRobots} />
                         </ErrorBoundary>
                     </Scroll>
                 </div>
